@@ -8,27 +8,24 @@
 			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
 		}
 	],
-	"propertyOrder": [
-		"image"
-	],
 	"type": "object",
 	"properties": {
 		"image": {
-			"title": "Image",
-			"description": "insert an image",
 			"type": "object",
-			"anyOf": [
+			"allOf": [
 				{
 					"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
 				}
-			]
+			],
+			"title": "Image",
+			"description": ""
 		},
-		"imagealt": {
+		"image-alt": {
 			"type": "string",
-			"minLength": 0,
-			"maxLength": 150,
+			"maxLength": 256,
 			"title": "Image alt text",
-			"description": "insert image alt text"
+			"description": "The text shown if the image is not loaded",
+			"format": "text"
 		}
 	}
 }
