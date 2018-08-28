@@ -1,11 +1,11 @@
 {
     "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-    "id": "https://raw.githubusercontent.com/kalps1982/amp_content_types/master/link.json",
+    "id": "https://raw.githubusercontent.com/kalps1982/amp_content_types/master/heading.json",
     "title": "Link",
     "description": "Link",
     "propertyOrder": [
         "class",
-        "label",
+        "type",
         "value"
     ],
     "allOf": [
@@ -17,23 +17,20 @@
     "properties": {
         "class": {
             "type": "string",
-            "enum": [
-                "button-primary",
-                "button-secondary",
-                "button-tertiary",
-                "button-primary-green",
-                "button-primary-white",
-                "button-secondary-red",
-                "module__action-link"
-            ],
-            "title": "Link Class",
-            "description": "Link Class"
-        },
-        "label": {
-            "type": "string",
             "minLength": 0,
             "maxLength": 2000,
-            "title": "Label",
+            "title": "Heading Class",
+            "description": "Heading Class"
+        },
+        "type": {
+            "type": "string",
+            "enum": [
+                "H1",
+                "H2",
+                "H3",
+                "H4"
+            ],
+            "title": "Heading Type",
             "description": ""
         },
         "value": {

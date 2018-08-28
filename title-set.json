@@ -1,0 +1,78 @@
+{
+    "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+    "id": "https://raw.githubusercontent.com/kalps1982/amp_content_types/master/title-set.json",
+    "title": "Slot text",
+    "description": "Slot text desc",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "theme": {
+            "type": "string",
+            "enum": [
+                "theme--white",
+                "theme--blue"
+            ],
+            "title": "Theme",
+            "description": "Select theme"
+        },
+        "title": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 2000,
+            "title": "Title",
+            "description": "Title of the section"
+        },
+        "sub-title": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 2000,
+            "title": "Sub-Title",
+            "description": "Subtitle of the section"
+        },
+        "description": {
+            "title": "Description",
+            "description": "Choose text",
+            "type": "object",
+            "allOf": [
+                {
+                    "$ref": "https://raw.githubusercontent.com/kalps1982/amp_content_types/master/text.json"
+                }
+            ]
+        },
+        "icon": {
+            "title": "Icon",
+			"type": "object",
+			"anyOf": [{
+				"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+			}]
+        },
+        "tags": {
+            "type": "array",
+            "items": {
+                "allOf": [
+                    {
+                        "$ref": "https://raw.githubusercontent.com/kalps1982/amp_content_types/master/tag.json"
+                    },
+                    {
+                        "properties": {
+                            "contentType": {
+                                "title": "Tag",
+                                "enum": [
+                                    "https://raw.githubusercontent.com/kalps1982/amp_content_types/master/tag.json"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            "minItems": 0,
+            "maxItems": 20,
+            "title": "Tags",
+            "description": ""
+        }
+    }
+}

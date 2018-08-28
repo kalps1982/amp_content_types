@@ -1,0 +1,24 @@
+{
+    "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+    "id": "https://raw.githubusercontent.com/kalps1982/amp_content_types/master/tag.json",
+    "title": "Tag",
+    "description": "Tag",
+    "propertyOrder": [
+        "label"
+    ],
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "label": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255,
+            "title": "Label",
+            "description": ""
+        }
+    }
+}
