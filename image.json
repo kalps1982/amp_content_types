@@ -1,6 +1,6 @@
 {
 	"$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-	"id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+	"id": "https://raw.githubusercontent.com/kalps1982/amp_content_types/master/image.json",
 
 	"title": "Image",
 	"description": "Image Accelerator",
